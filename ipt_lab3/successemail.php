@@ -28,10 +28,10 @@
             <!-- Column with medium width -->
             <div class="col-md-6">
                 <!-- Card with a border and secondary outline -->
-                <div class="card border-outline-warning" style="backdrop-filter: blur(10px); background-color: rgba(255, 255, 255, 0.5);">
+                <div class="card border-outline-secondary" style="backdrop-filter: blur(10px); background-color: rgba(255, 255, 255, 0.5);">
                     <!-- Card header containing a form with action to index.php -->
                     <div class="card-header">
-                        <form action="verify.php" method="post">
+                        <form action="verifyemail.php" method="post">
                         <!-- Heading with large text and centered alignment -->    
                         <h1  class="display-4 text-center text-warning">OTP VERIFY</h1>
                     </div>    
@@ -46,6 +46,11 @@
                             <p class="success display-6 text-decoration-underline text-success text-center"><?php echo $_GET['success']; ?></p>
                         <?php } ?>
                         <!-- Form group for username input -->
+                        <div class="form-group">
+                            <label class="display-6 text-start text-warning">Email</label>
+                            <!-- Input field for username -->
+                            <input type="text" class="form-control form-control-lg bg-white fs-6" name="emails" placeholder="Enter your email" ><br>
+                        </div>
                         <div class="form-group">
                             <label class="display-6 text-start text-warning">OTP</label>
                             <!-- Input field for username -->

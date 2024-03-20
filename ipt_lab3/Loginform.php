@@ -39,17 +39,23 @@
                     <div class="card-body">
                         <?php if (isset($_GET['error'])) { ?>
                             <!-- Paragraph with error styling and text from GET parameter -->
-                            <p class="error text-decoration-underline text-danger"><?php echo $_GET['error']; ?></p>
+                            <p class="error display-6 text-decoration-underline text-danger text-center"><?php echo $_GET['error']; ?></p>
+                        <?php } ?>
+                        <?php if (isset($_GET['success'])) { ?>
+                            <!-- Paragraph with error styling and text from GET parameter -->
+                            <p class="success display-6 text-decoration-underline text-success text-center"><?php echo $_GET['success']; ?></p>
                         <?php } ?>
                         <!-- Form group for username input -->
                         <div class="form-group">
                             <label class="display-6 text-start text-secondary">User Name</label>
-                            <input type="text" class="form-control form-control-lg bg-white fs-6" name="uname" placeholder="User Name"><br>
+                            <!-- Input field for username -->
+                            <input type="text" class="form-control form-control-lg bg-white fs-6" name="uname" placeholder="User Name" ><br>
                         </div>
                         <!-- Form group for password input -->
                         <div class="form-group">
                             <label class="display-6 text-start text-secondary">Password</label>
-                            <input type="password" class="form-control form-control-lg bg-white fs-6" name="password" placeholder="Password"><br>   
+                            <!-- Input field for password with autocomplete turned off -->
+                            <input type="password" class="form-control form-control-lg bg-white fs-6" name="password" placeholder="Password" autocomplete="off"><br>   
                         </div>
                         <!-- Button to submit the login form -->
                         <div class="d-grid gap-2 col-6 mx-auto">
@@ -59,7 +65,7 @@
                 <!-- Card footer containing a link to the registration form -->    
                 <div class="card-footer">
                     <!-- Paragraph with a link to the registration form -->
-                    <p class="text-secondary">Don't have an account?<a type="button" href="registerform.php" class="btn btn-link">Register here</a></p>
+                    <p class="text-secondary">Don't have an account? <a href="registerform.php">Register here</a></p>
                 </form>
                 </div>
             </div>
